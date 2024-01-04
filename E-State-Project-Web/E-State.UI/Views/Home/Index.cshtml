@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@await Component.InvokeAsync("AdvertSlider");
+
+
+
+@await Html.PartialAsync("~/Views/Home/PartialFiltre.cshtml");
+
+<!-- ##### Advance Search Area End ##### -->
+
+<!-- ##### Featured Properties Area Start ##### -->
+@await Component.InvokeAsync("AdvertAll");

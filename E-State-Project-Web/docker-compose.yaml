@@ -1,0 +1,32 @@
+version: '3.4'
+
+networks:
+  vizeproje:
+
+services:
+  vizeprojedb:
+    container_name: vize-proje-db
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    ports:
+     - 8001:1433
+    environment:
+     - ACCEPT_EULA=Y
+     - SA_PASSWORD=Password123
+    networks:
+     - vizeproje
+  vize-proje:
+    container_name: vize-proje-app
+    image: add/vize-proje
+    build:
+      context: .
+      dockerfile: E-State.UI/Dockerfile
+    ports:
+     - 8002:80
+    depends_on:
+     - vizeprojedb
+    environment:
+     - DB_HOST=vizeprojedb
+     - DB_NAME=E-State-Web3
+     - DB_SA_PASSWORD=Password123
+    networks:
+     - vizeproje

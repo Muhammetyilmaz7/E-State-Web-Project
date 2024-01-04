@@ -1,0 +1,235 @@
+﻿@using Microsoft.AspNetCore.Http
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- Title  -->
+    <title>YILMAZ Emlak Hizmetleri A.Ş.</title>
+
+    <!-- Favicon  -->
+    <link rel="icon" href="~/south-master/img/core-img/favicon.ico">
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="~/south-master/style.css">
+    <script src="~/south-master/js/jquery/jquery-2.2.4.min.js"></script>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="south-load"></div>
+    </div>
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+
+        <!-- Top Header Area -->
+        <div class="top-header-area">
+            <div class="h-100 d-md-flex justify-content-between align-items-center">
+                <div class="email-address">
+                    <a href="mailto:f211229018@ktun.edu.tr">f211229018@ktun.edu.tr</a>
+                </div>
+                <div class="phone-number d-flex">
+                    <div class="icon">
+                        <img src="~/south-master/img/icons/phone-call.png" alt="">
+                    </div>
+                    <div class="number">
+                        <a href="tel:+45 677 8993000 223">0 (272) 215 23 45</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Header Area -->
+        <div class="main-header-area" id="stickyHeader">
+            <div class="classy-nav-container breakpoint-off">
+                <!-- Classy Menu -->
+                <nav class="classy-navbar justify-content-between" id="southNav">
+
+                    <!-- Logo -->
+                    <a class="nav-brand" href="index.html"><img src="~/south-master/img/core-img/logo.png" alt=""></a>
+
+                    <!-- Navbar Toggler -->
+                    <div class="classy-navbar-toggler">
+                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                    </div>
+
+                    <!-- Menu -->
+                    <div class="classy-menu">
+
+                        <!-- close btn -->
+                        <div class="classycloseIcon">
+                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                        </div>
+
+                        <!-- Nav Start -->
+                        <div class="classynav">
+                            <ul>
+                                <li><a asp-controller="Home" asp-action="Index">AnaSayfa</a></li>
+                                <li>
+                                    <a asp-controller="Advert" asp-action="AdvertRent">Kiralık</a>
+
+                                </li>
+                                <li>
+                                    <a asp-controller="Advert" asp-action="AdvertSale">Satılık</a>
+
+                                </li>
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <li><a href="about-us.html">@Context.Session.GetString("FullName")</a></li>
+                                    <li><a asp-area="User" asp-controller="User" asp-action="Index">Panelim</a></li>
+                                    <li><a asp-area="User" asp-controller="User" asp-action="LogOut">Çıkış Yap</a></li>
+                                }
+                                else
+                                {
+                                    <li><a asp-area="User" asp-controller="User" asp-action="Login">Giriş Yap</a></li>
+                                    <li><a asp-area="User" asp-controller="User" asp-action="Register">Kayıt Ol</a></li>
+                                }
+
+
+                            </ul>
+
+                            <!-- Search Form -->
+                            <div class="south-search-form">
+                                <form action="#" method="post">
+                                    <input type="search" name="search" id="search" placeholder="Search Anything ...">
+                                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </form>
+                            </div>
+
+                            <!-- Search Button -->
+                            <a href="#" class="searchbtn"><i class="fa" aria-hidden="true"></i></a>
+                        </div>
+                        <!-- Nav End -->
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        @RenderBody()
+    </div>
+    <footer class="footer-area section-padding-100-0 bg-img gradient-background-overlay" style="background-image: url(~/south-master
+/img/bg-img/cta.jpg);">
+        <!-- Main Footer Area -->
+        <div class="main-footer-area">
+            <div class="container">
+                <div class="row">
+
+                    <!-- Single Footer Widget -->
+                    <div class="col-12 col-sm-6 col-xl-3">
+                        <div class="footer-widget-area mb-100">
+                            <!-- Widget Title -->
+                            <div class="widget-title">
+                                <h6>HAKKIMIZDA</h6>
+                            </div>
+
+                            <img src="~/south-master/img/bg-img/footer.jpg" alt="">
+                            <div class="footer-logo my-4">
+                                <img src="~/south-master/img/core-img/logo.png" alt="">
+                            </div>
+                            <p>
+                                YILMAZ Emlak Danışmanlık A.Ş., sektörde deneyimli ve uzman ekibiyle özel emlak çözümleri sunar. Güvenilir, şeffaf ve etik değerlere bağlı bir marka olarak, müşteri memnuniyetine odaklanır. Yaratıcı çözümleri ve güncel trendleri takip ederek, müşterilere özel emlak deneyimleri sunmayı hedefler.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Single Footer Widget -->
+                    <div class="col-12 col-sm-6 col-xl-3">
+                        <div class="footer-widget-area mb-100">
+                            <!-- Widget Title -->
+                            <div class="widget-title">
+                                <h6>ÇALIŞMA SAATLERİMİZ</h6>
+                            </div>
+                            <!-- Office Hours -->
+                            <div class="weekly-office-hours">
+                                <ul>
+                                    <li class="d-flex align-items-center justify-content-between"><span>Pazartesi - Cuma</span> <span>09.00 - 19.00</span></li>
+                                    <li class="d-flex align-items-center justify-content-between"><span>Cumartesi</span> <span>09.00 - 14.00</span></li>
+                                    <li class="d-flex align-items-center justify-content-between"><span>Pazar</span> <span>Kapalı</span></li>
+                                </ul>
+                            </div>
+                            <!-- Address -->
+                            <div class="address">
+                                <h6><img src="~/south-master/img/icons/phone-call.png" alt="">+90 (507) 622 03 35  </h6>
+                                <h6><img src="~/south-master/img/icons/envelope.png" alt=""> f211229018@ktun.edu.tr</h6>
+                                <h6><img src="~/south-master/img/icons/location.png" alt="">Ardıçlı, Rauf Orbay Cd., 42250 Selçuklu/Konya</h6>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Single Footer Widget -->
+                    <div class="col-12 col-sm-6 col-xl-3">
+                        <div class="footer-widget-area mb-100">
+                            <!-- Widget Title -->
+                            <div class="widget-title">
+                                <h6>LİNKLER</h6>
+                            </div>
+                            <!-- Nav -->
+                            <ul class="useful-links-nav d-flex align-items-center">
+                                <li><a href="#">Ana Sayfa</a></li>
+                                <li><a href="#">Hakkımızda</a></li>                          
+                                <li><a href="#">Hizmetler</a></li>
+                                <li><a href="#">Özellikler</a></li>
+                                <li><a href="#">İlanlar</a></li>
+                                <li><a href="#">Görüşler</a></li>                            
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Görüşler</a></li>
+                                <li><a href="#">İletişim</a></li>
+                                <li><a href="#">SSS</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Single Footer Widget -->
+                    <div class="col-12 col-sm-6 col-xl-3">
+                        <div class="footer-widget-area mb-100">
+                            <!-- Widget Title -->
+                            <div class="widget-title">
+                                <h6>ÖNE ÇIKANLAR</h6>
+                            </div>
+                            <!-- Featured Properties Slides -->
+                            <div class="featured-properties-slides owl-carousel">
+                                <!-- Single Slide -->
+                                <div class="single-featured-properties-slide">
+                                    <a href="#"><img src="~/south-master/img/bg-img/fea-product.jpg" alt=""></a>
+                                </div>
+                                <!-- Single Slide -->
+                                <div class="single-featured-properties-slide">
+                                    <a href="#"><img src="~/south-master/img/bg-img/fea-product.jpg" alt=""></a>
+                                </div>
+                                <!-- Single Slide -->
+                                <div class="single-featured-properties-slide">
+                                    <a href="#"><img src="~/south-master/img/bg-img/fea-product.jpg" alt=""></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        
+    </footer>
+    <!-- ##### Footer Area End ##### -->
+    <!-- jQuery (Necessary for All JavaScript Plugins) -->
+    <!-- Popper js -->
+    <script src="~/south-master/js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="~/south-master/js/bootstrap.min.js"></script>
+    <!-- Plugins js -->
+    <script src="~/south-master/js/plugins.js"></script>
+    <script src="~/south-master/js/classy-nav.min.js"></script>
+    <script src="~/south-master/js/jquery-ui.min.js"></script>
+    <!-- Active js -->
+    <script src="~/south-master/js/active.js"></script>
+
+</body>
+
+</html>

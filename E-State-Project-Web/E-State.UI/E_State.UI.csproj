@@ -1,0 +1,73 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>E_State.UI</RootNamespace>
+    <UserSecretsId>d5e09ce6-6be7-4f1a-9ecb-8c3b2f25b344</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Mapster" Version="6.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="6.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.19.5" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.16" />
+    <PackageReference Include="X.PagedList" Version="8.4.7" />
+    <PackageReference Include="X.PagedList.Mvc.Core" Version="8.4.7" />
+    <PackageReference Include="X.PagedList.Web.Common" Version="8.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\User\Data\" />
+    <Folder Include="wwwroot\img\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\south-master\.gitattributes" />
+    <None Include="wwwroot\south-master\.sass-cache\c271f55aaaf7c7f11c38a51797984cacc713c712\style.scssc" />
+    <None Include="wwwroot\south-master\.sass-cache\c271f55aaaf7c7f11c38a51797984cacc713c712\_mixin.scssc" />
+    <None Include="wwwroot\south-master\.sass-cache\c271f55aaaf7c7f11c38a51797984cacc713c712\_responsive.scssc" />
+    <None Include="wwwroot\south-master\.sass-cache\c271f55aaaf7c7f11c38a51797984cacc713c712\_themecolor.scssc" />
+    <None Include="wwwroot\south-master\.sass-cache\c271f55aaaf7c7f11c38a51797984cacc713c712\_theme_color.scssc" />
+    <None Include="wwwroot\south-master\.sass-cache\c271f55aaaf7c7f11c38a51797984cacc713c712\_variables.scssc" />
+    <None Include="wwwroot\south-master\fonts\classy.svg" />
+    <None Include="wwwroot\south-master\fonts\fontawesome-webfont.svg" />
+    <None Include="wwwroot\south-master\fonts\fontawesome-webfont.woff2" />
+    <None Include="wwwroot\south-master\fonts\themify.svg" />
+    <None Include="wwwroot\south-master\js\active.js" />
+    <None Include="wwwroot\south-master\js\bootstrap.min.js" />
+    <None Include="wwwroot\south-master\js\classy-nav.min.js" />
+    <None Include="wwwroot\south-master\js\jquery-ui.min.js" />
+    <None Include="wwwroot\south-master\js\jquery\jquery-2.2.4.min.js" />
+    <None Include="wwwroot\south-master\js\map-active.js" />
+    <None Include="wwwroot\south-master\js\plugins.js" />
+    <None Include="wwwroot\south-master\js\popper.min.js" />
+    <None Include="wwwroot\south-master\scss\style.scss" />
+    <None Include="wwwroot\south-master\scss\_mixin.scss" />
+    <None Include="wwwroot\south-master\scss\_responsive.scss" />
+    <None Include="wwwroot\south-master\scss\_theme_color.scss" />
+    <None Include="wwwroot\south-master\scss\_variables.scss" />
+    <None Include="wwwroot\south-master\style.css.map" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj" />
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj" />
+    <ProjectReference Include="..\EntityLayer\EntityLayer.csproj" />
+  </ItemGroup>
+
+</Project>
