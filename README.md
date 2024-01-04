@@ -36,8 +36,6 @@ Docker: Containerization technology for fast deployment and operation of the app
 Getting Started
 Clone the project:
 
-
-bash
 Copy code
 git clone https://github.com/Muhammetyilmaz7/E-State-Web-Project.git
 Contribution
