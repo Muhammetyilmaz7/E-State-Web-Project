@@ -1,6 +1,6 @@
 .NET Core 6.0 Real Estate Web Project
 
-This project is a web application developed to manage real estate listings and provide users with an easy way to browse them. The technologies used in the project include C#, CSS, HTML, JavaScript, Bootstrap, and Docker.
+This project is a web application developed to manage real estate listings and provide users with an easy way to browse them. The technologies used in the project include C#, MVC, CSS, HTML, JavaScript, Bootstrap, and Docker.
 
 Features
 
